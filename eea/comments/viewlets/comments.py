@@ -36,7 +36,7 @@ from zope.interface import alsoProvides
 
 COMMENT_DESCRIPTION_PLAIN_TEXT = _(
     u'comment_description_plain_text',
-    default=u'You can add a comment by filling out the form below. '
+    default=u'You can adddd a comment by filling out the form below. '
             u'Plain text formatting.',
 )
 
@@ -367,7 +367,6 @@ class CommentsViewlet(ViewletBase):
         """Returns true if current user has the 'Edit comments'
         permission.
         """
-        # import pdb; pdb.set_trace()
         return getSecurityManager().checkPermission('Edit comments',
                                                     aq_inner(reply))
 
