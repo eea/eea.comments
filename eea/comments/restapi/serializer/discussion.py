@@ -1,3 +1,4 @@
+"""Discussion serializers"""
 from plone.app.discussion.interfaces import IComment
 from plone.app.discussion.interfaces import IConversation
 from plone.restapi.batching import HypermediaBatch
@@ -20,6 +21,7 @@ from eea.comments.restapi.services.discussion.utils import can_reply
 @implementer(ISerializeToJson)
 @adapter(IConversation, IRequest)
 class ConversationSerializer:
+    """Conversation serializer"""
     def __init__(self, context, request):
         self.context = context
         self.request = request
@@ -53,6 +55,7 @@ class ConversationSerializer:
 @implementer(ISerializeToJson)
 @adapter(IComment, IRequest)
 class CommentSerializer:
+    """Comment serializer"""
     def __init__(self, context, request):
         self.context = context
         self.request = request
@@ -101,6 +104,7 @@ class CommentSerializer:
         }
 
     def get_author_image(self, username=None):
+        """Get author image"""
         if username is None:
             return
         portal_membership = getToolByName(
