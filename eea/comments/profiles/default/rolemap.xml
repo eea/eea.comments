@@ -3,10 +3,6 @@
     <permissions>
         <permission name="View comments" acquire="True">
             <role name="Anonymous"/>
-            <role name="Authenticated"/>
-        </permission>
-        <permission name="Add comments" acquire="True">
-            <role name="Authenticated"/>
         </permission>
     </permissions>
 </rolemap>
