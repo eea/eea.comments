@@ -20,7 +20,7 @@ from eea.comments.restapi.services.discussion.utils import can_reply
 
 @implementer(ISerializeToJson)
 @adapter(IConversation, IRequest)
-class ConversationSerializer:
+class ConversationSerializer(object):
     """Conversation serializer"""
     def __init__(self, context, request):
         self.context = context
@@ -54,7 +54,7 @@ class ConversationSerializer:
 
 @implementer(ISerializeToJson)
 @adapter(IComment, IRequest)
-class CommentSerializer:
+class CommentSerializer(object):
     """Comment serializer"""
     def __init__(self, context, request):
         self.context = context
@@ -106,11 +106,11 @@ class CommentSerializer:
     def get_author_image(self, username=None):
         """Get author image"""
         if username is None:
-            return
+            return None
         portal_membership = getToolByName(
             self.context, "portal_membership", None
         )
         image = portal_membership.getPersonalPortrait(username).absolute_url()
         if image.endswith("defaultUser.png"):
-            return
+            return None
         return image
