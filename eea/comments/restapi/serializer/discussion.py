@@ -59,7 +59,7 @@ class CommentSerializer:
 
     def __call__(self, include_items=True):
         content_url = self.context.__parent__.__parent__.absolute_url()
-        comments_url = f"{content_url}/@comments"
+        comments_url = "{}/@comments".format(content_url)
         url = f"{comments_url}/{self.context.id}"
 
         if self.context.in_reply_to:
