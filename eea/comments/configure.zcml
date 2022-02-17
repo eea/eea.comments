@@ -5,7 +5,9 @@
 
   <i18n:registerTranslations directory="locales" />
 
+  <include file="permissions.zcml" />
   <include file="profiles.zcml" />
+
   <include package=".browser" />
   <include package=".upgrades" />
 
