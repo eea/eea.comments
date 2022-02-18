@@ -1,6 +1,9 @@
 Changelog
 =========
 
+1.2-dev0 - (unreleased)
+---------------------------
+
 1.1 - (2022-02-18)
 ---------------------------
 * Bugfix: Fix restAPI if not user can_view
