@@ -1,8 +1,10 @@
 Changelog
 =========
 
-1.1-dev0 - (unreleased)
+1.1 - (2022-02-18)
 ---------------------------
+* Change: Add missing __init__ files in restapi modules
+  [avoinea]
 
 1.0 - (2022-02-17)
 ---------------------------
